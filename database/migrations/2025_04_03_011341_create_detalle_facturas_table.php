@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('detalle_facturas', function (Blueprint $table) {
+        Schema::create('detalle_factura', function (Blueprint $table) {
             $table->id('id_detalle');
             $table->unsignedBigInteger('id_pedido');
             $table->unsignedBigInteger('id_producto');
@@ -23,12 +23,12 @@ return new class extends Migration
             // Relaciones con Pedido y Producto
             $table->foreign('id_pedido')
                   ->references('id_pedido')
-                  ->on('pedidos')
+                  ->on('pedido')
                   ->onDelete('cascade');
         
             $table->foreign('id_producto')
                   ->references('id_producto')
-                  ->on('productos')
+                  ->on('producto')
                   ->onDelete('cascade');
         });
         
@@ -39,6 +39,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('detalle_facturas');
+        Schema::dropIfExists('detalle_factura');
     }
 };

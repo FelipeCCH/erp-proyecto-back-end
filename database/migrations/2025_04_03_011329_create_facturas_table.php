@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('facturas', function (Blueprint $table) {
+        Schema::create('factura', function (Blueprint $table) {
             $table->id('id_factura');
             $table->unsignedBigInteger('id_comprador');
             $table->unsignedBigInteger('id_vendedor');
@@ -22,12 +22,12 @@ return new class extends Migration
             // Relaciones con Empresa para comprador y vendedor
             $table->foreign('id_comprador')
                   ->references('id_empresa')
-                  ->on('empresas')
+                  ->on('empresa')
                   ->onDelete('cascade');
         
             $table->foreign('id_vendedor')
                   ->references('id_empresa')
-                  ->on('empresas')
+                  ->on('empresa')
                   ->onDelete('cascade');
         });
         
@@ -38,6 +38,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('facturas');
+        Schema::dropIfExists('factura');
     }
 };

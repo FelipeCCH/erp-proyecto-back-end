@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pedidos', function (Blueprint $table) {
+        Schema::create('pedido', function (Blueprint $table) {
             $table->id('id_pedido');
             $table->unsignedBigInteger('id_factura');
             $table->timestamp('fecha_pedido')->useCurrent();
@@ -30,7 +30,7 @@ return new class extends Migration
             // Relación con Factura
             $table->foreign('id_factura')
                   ->references('id_factura')
-                  ->on('facturas')
+                  ->on('factura')
                   ->onDelete('cascade');
         });
         
@@ -41,6 +41,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pedidos');
+        Schema::dropIfExists('pedido');
     }
 };
