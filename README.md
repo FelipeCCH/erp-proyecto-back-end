@@ -32,12 +32,16 @@ Este repositorio contiene el backend de un sistema ERP para la gestión de sumin
    git clone https://github.com/TuUsuario/erp-proyecto-back-end.git
 Instalar las dependencias:
 
+## Instalación del proyecto
+
+### 1. Instalar las dependencias
+
 Navega al directorio del proyecto y ejecuta:
 
-bash
-Copiar
+```bash
 cd erp-proyecto-back-end
 composer install
+
 Configurar el entorno:
 
 Copia el archivo .env.example a .env:
