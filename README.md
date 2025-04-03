@@ -30,6 +30,7 @@ Este repositorio contiene el backend de un sistema ERP para la gestión de sumin
    ```bash
    git clone https://github.com/TuUsuario/erp-proyecto-back-end.git
    ```
+---
 2. **Instalar las dependencias:**
 
 Navega al directorio del proyecto y ejecuta:
@@ -40,6 +41,7 @@ cd erp-proyecto-back-end
 
 composer install
 ```
+---
 3. **Configurar el entorno:**
 
 Copia el archivo .env.example a .env:
@@ -51,13 +53,15 @@ cp .env.example .env
 ```
 Edita el archivo .env para configurar la conexión a la base de datos y otras variables necesarias.
 
+---
+
 4. **Generar la clave de la aplicación:**
 
 ```bash
 
-
 php artisan key:generate
 ```
+---
 5. **Ejecutar las migraciones:**
 
 Esto creará las tablas en la base de datos según la estructura definida en las migraciones.
@@ -66,6 +70,7 @@ Esto creará las tablas en la base de datos según la estructura definida en las
 
 php artisan migrate
 ```
+---
 6.. **Iniciar el servidor de desarrollo:**
 
 ```bash
@@ -73,6 +78,6 @@ php artisan migrate
 php artisan serve
 
 ```
-
+---
 👨‍💻 Desarrolladores
 Luis Felipe Campos – Backend / @FelipeCCH
