@@ -10,7 +10,6 @@ Este repositorio contiene el backend de un sistema ERP para la gestión de sumin
 - **PHP 8.x**
 - **MySQL** (o cualquier base de datos compatible, configurada en el archivo `.env`)
 - **Composer** (gestión de dependencias)
-- **Guzzle** (para realizar peticiones HTTP, si es necesario)
 - Funcionalidades nativas de Laravel (migraciones, colas, jobs, etc.)
 
 ---
@@ -30,16 +29,17 @@ Este repositorio contiene el backend de un sistema ERP para la gestión de sumin
 
    ```bash
    git clone https://github.com/TuUsuario/erp-proyecto-back-end.git
+   ```
 Instalar las dependencias:
-
-## Instalación del proyecto
-
-### 1. Instalar las dependencias
 
 Navega al directorio del proyecto y ejecuta:
 
-```bash
+bash
+
+Copiar
+
 cd erp-proyecto-back-end
+
 composer install
 
 Configurar el entorno:
@@ -47,36 +47,39 @@ Configurar el entorno:
 Copia el archivo .env.example a .env:
 
 bash
-Copiar
-cp .env.example .env
-Edita el archivo .env para configurar la conexión a la base de datos y otras variables necesarias. Por ejemplo, para MySQL:
 
-env
 Copiar
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=supplynet
-DB_USERNAME=root
-DB_PASSWORD=
+
+cp .env.example .env
+
+Edita el archivo .env para configurar la conexión a la base de datos y otras variables necesarias.
+
 Generar la clave de la aplicación:
 
 bash
+
 Copiar
+
 php artisan key:generate
+
 Ejecutar las migraciones:
 
 Esto creará las tablas en la base de datos según la estructura definida en las migraciones.
 
 bash
+
 Copiar
+
 php artisan migrate
+
 Iniciar el servidor de desarrollo:
 
 bash
+
 Copiar
+
 php artisan serve
 
-👨‍💻 Desarrolladores
-Luis Felipe Campos– Backend / @FelipeCCH
+
+
 
