@@ -14,6 +14,7 @@ class Producto extends Model
     // Habilita la asignación masiva para los campos que deseas
     protected $fillable = [
         'id_empresa',
+        'id_categoriaProducto',
         'nombre',
         'descripcion',
         'precio',
@@ -29,4 +30,6 @@ class Producto extends Model
     {
         return $this->belongsTo(Empresa::class, 'id_empresa', 'id_empresa');
     }
+
+   
 }
