@@ -31,5 +31,13 @@ class Producto extends Model
         return $this->belongsTo(Empresa::class, 'id_empresa', 'id_empresa');
     }
 
+    // En App\Models\Producto.php
+
+    public function imagenes()
+    {
+        return $this->hasMany(ImagenProducto::class, 'id_producto');
+    }
+
+
    
 }
